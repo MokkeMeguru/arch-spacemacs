@@ -1,0 +1,25 @@
+* このレポジトリは何？
+  *Spacemacs* を Windows で心地よく使うための Dockerfile です。
+
+* Require
+  - MobaXterm    
+    for GUI
+  - Docker Toolbox for Windows    
+    for docker
+  - Love for Emacs    
+
+* 使い方
+  "Docker Quickstart Terminal" で以下のコマンドを実行してください。    
+
+  <ip-addr>:<port> は MobaXterm を起動した際に得られる値です。    
+
+  /c/Users/<name>/.ssh はあなたが普段使っている ssh 鍵のフォルダを指しています。   
+
+  #+BEGIN_SRC text
+  $ git clone https://github.com/MeguruMokke/arch-spacemacs && cd arch-spacemacs
+  /arch-spacemacs $ docker build -t arch-spacemacs .
+  /arch-spacemacs $ ./run_emacs.sh <ip-addr>:<port> /c/Users/<name>/.ssh
+  #+END_SRC
+
+
+  初回に限り、all-the-icons のパッケージインストールのために、~M-x all-the-icons-install-fonts~ ~M-m f e R~ を行ってください。
