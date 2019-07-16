@@ -382,7 +382,7 @@
                    ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))
                  )
     ;; (powerline-moe-theme)
-    (moe-theme-set-color 'cyan)
+    ;; (moe-theme-set-color 'cyan)
     (setq powerline-default-separator 'arrow-fade)
     (require 'company-box)
     (add-hook 'company-mode-hook 'company-box-mode)
