@@ -49,8 +49,8 @@ RUN git clone -b develop https://github.com/syl20bnr/spacemacs /home/emacs/.emac
 COPY .spacemacs /home/emacs/.spacemacs
 RUN sudo chown emacs /home/emacs/.spacemacs
 RUN emacs --daemon
-# RUN  emacsclient -e "(configuration-layer/update-packages t)"
-# RUN  emacsclient -e "(dotspacemacs/sync-configuration-layers)"
+RUN  emacsclient -e "(configuration-layer/update-packages t)" \
+ &&  emacsclient -e "(dotspacemacs/sync-configuration-layers)"
 
-WORKDIR "/home/emacs"
+# WORKDIR "/home/emacs"
 ENTRYPOINT ["/home/emacs/works/docker-entrypoint.sh"]

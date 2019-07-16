@@ -63,7 +63,8 @@
      ;; wrapped in a layer. If you need some configuration for these
      ;; packages, then consider creating a layer. You can also put the
      ;; configuration in `dotspacemacs/user-config'.
-     dotspacemacs-additional-packages '(mozc
+     dotspacemacs-additional-packages '(undo-tree
+                                        mozc
                                         latex-math-preview
                                         px
                                         hemisu-theme
