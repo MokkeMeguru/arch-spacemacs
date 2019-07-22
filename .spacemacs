@@ -69,7 +69,7 @@
                                         hemisu-theme
                                         company-box
                                         moe-theme
-                                        ein
+                                        ;; ein
                                         cherry-blossom-theme
                                         org-tree-slide
                                         google-translate
@@ -390,11 +390,11 @@
     (setq org-format-latex-options (plist-put org-format-latex-options :scale 2.0))
 
     ;; settings for ein
-    (require 'ein)
-    (require 'ein-notebook)
-    (require 'ein-jupyter)
-    (require 'ein-subpackages)
-    (setq ein:completion-backend 'ein:use-ac-jedi-backend)
+    ;; (require 'ein)
+    ;; require 'ein-notebook)
+    ;; (require 'ein-jupyter)
+    ;; (require 'ein-subpackages)
+    ;; (setq ein:completion-backend 'ein:use-ac-jedi-backend)
   )
 
   ;; Do not write anything past this comment. This is where Emacs will
