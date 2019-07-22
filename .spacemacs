@@ -321,6 +321,7 @@
      ;; delete only whitespace for changed lines or `nil' to disable cleanup.
      ;; (default nil)
      dotspacemacs-whitespace-cleanup nil
+     dotspacemacs-mode-line-theme 'all-the-icons
      ))
 
   (defun dotspacemacs/user-init ()
