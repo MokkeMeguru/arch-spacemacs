@@ -34,8 +34,12 @@
        yaml
        ruby
        html
-       javascript
-       typescript
+       (javascript :variables
+                   node-add-modules-path t
+                   js2-include-node-externs t
+                   javascript-repl `skewer)
+       (typescript :variable
+                   typescript-fmt-on-save t)
        clojure
        csv
        python
