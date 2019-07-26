@@ -6,7 +6,7 @@ RUN pacman --noconfirm -Sy pacman-contrib \
   && rankmirrors -n 6 /etc/pacman.d/mirrorlist.backup > /etc/pacman.d/mirrorlist \
   && echo -e "[multilib]\nInclude = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf \
   && pacman -Syyu --noconfirm \
-  base base-devel git openssh wget which emacs gtk2 python3 noto-fonts-cjk \
+  base base-devel git openssh wget which emacs gtk2 python3 noto-fonts-cjk npm node \
   rustup clojure \
 ###
 ### RUN   sed -i "s/PermitRootLogin prohibit-password/PermitRootLogin yes/" /etc/ssh/sshd_config
@@ -27,6 +27,8 @@ WORKDIR "/home/emacs/works"
 RUN rustup default stable \
   && rustup component add rust-src \
   && cargo install racer rustfmt
+
+RUN sudo npm i -g typescript typescript-language-server tslint
 
 RUN git clone https://aur.archlinux.org/yay.git
 RUN git clone https://aur.archlinux.org/mozc.git
