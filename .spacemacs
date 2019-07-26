@@ -39,7 +39,8 @@
                    js2-include-node-externs t
                    javascript-repl `skewer)
        (typescript :variable
-                   typescript-fmt-on-save t)
+                   typescript-fmt-on-save t
+                   typescript-backend 'tide)
        clojure
        csv
        python
